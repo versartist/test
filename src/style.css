@@ -23,12 +23,12 @@ body{
     display: flex;
 }
 .greeting::before {
-    content: "<";
+    content: "< ";
     font-weight: 900;
     font-size: larger;
 } 
 .greeting::after {
-    content : "/>";
+    content : " />";
     font-weight: 900;
     font-size: larger;
 }

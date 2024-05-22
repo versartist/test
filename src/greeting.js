@@ -9,7 +9,7 @@ const greetings = [
     "Ciao" /* Italian */,
     "Olá" /* Portuguese */,
     "你好" /* Mandarin Chinese (Nǐ hǎo) */,
-    "안녕하세요" /* Korean (Anyeonghaseyo) */,
+    "안녕하" /* Korean (Anyeonghaseyo) */,
     "مرحبا" /* Arabic (Marhaba) */,
     "नमस्ते" /* Hindi (Namaste) */,
     "Cześć" /* Polish */,
@@ -17,7 +17,7 @@ const greetings = [
     "Hallo" /* Dutch */,
     "Hej" /* Swedish */,
     "Hei" /* Norwegian */,
-    "Hola Welcome"
+    "Hola", "Welcome"
   ];
 
 
