@@ -38,7 +38,7 @@ const greetings = [
   
     greetings.forEach((greeting, index, greetingsArray) => {
       if (index == greetingsArray.length -1  ) { 
-        tl.to(textHolder,{ duration: .15 , innerHTML: `<h2 class="greeting">${greeting}</h2>`})
+        tl.to(textHolder,{ duration: .5 , innerHTML: `<h2 class="greeting">${greeting}</h2>`})
         .to(textHolder,{ duration: .4 , y :80 , ease : "power3.out" })
         .to(textHolder,{ duration: .4 , y : '-100vh' , ease : "power3.out" })
         .to(textHolder, {duration : .1 , opacity : 0} ); 
