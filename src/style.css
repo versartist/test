@@ -24,9 +24,13 @@ body{
 }
 .greeting::before {
     content: "<";
+    font-weight: 900;
+    font-size: larger;
 } 
 .greeting::after {
-    content : "/>"
+    content : "/>";
+    font-weight: 900;
+    font-size: larger;
 }
 
 .stripes {
