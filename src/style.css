@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Jost&family=Rubik:wght@400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font : "Nunito";
+    --primary-color : rgb(243, 107, 44);
+}
+
+body{
+    font-family: var(--main-font);
+    
+}
+
+.preloader {
+    width:100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.stripes {
+    flex:1;
+    background-color: var(--primary-color);
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

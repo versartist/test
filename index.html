@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
-<body>
-    <h3>COming soon</h3>
+<body onload="displayAndAnimate()">
+    <div class="preloader">
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="stripes"></div>
+        <div class="text">
+            <h2 class="greeting">welcome</h2>
+        </div>
+    </div>
+
+
+    <!-- main -->
+    <section class="main"></section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="src/script.js"></script>
+    <script src="src/greeting.js"></script>
 </body>
 </html>
