@@ -22,6 +22,12 @@ body{
     height: 100vh;
     display: flex;
 }
+.greeting::before {
+    content: "<";
+} 
+.greeting::after {
+    content : "/>"
+}
 
 .stripes {
     flex:1;
