@@ -3,7 +3,7 @@ const menuEl = document.querySelectorAll('.dmenu-el')
 const dropDown  = document.querySelector(".fullscreen-menu");
 const closeBtn = document.querySelector('.closeBtn');
 const main = document.querySelector('.content')
-
+const title = document.querySelector('.title');
 
 menuBtn.addEventListener('click', ()=>{
     closeBtn.style.display = "block"
@@ -55,13 +55,66 @@ menuEl.forEach((el)=>{
         });
     })
 
-    el.addEventListener("mouseleave", ()=>{
+    el.addEventListener("mouseout", ()=>{
         anime({
             targets: el,
             translateX:0,
             translateY:0,
-            duration: 10,
+            duration: 100,
             easing: 'linear'
         })
     })
 })
+
+//animation for the logo text
+title.addEventListener("mouseover", ()=>{
+    let first = document.getElementsByClassName("first")
+    let second = document.getElementsByClassName("second")
+
+    anime({
+        targets: first,
+        translateX:"-76px",
+        duration: 100,
+        easing: 'linear'
+    })
+    anime({
+        targets: second,
+        translateX:"-157px",
+        duration: 200,
+        easing: 'easeOutCirc',
+        delay:0
+    })
+    anime({
+        targets: title,
+        maxWidth: '155px',
+        duration: 100,
+        easing: 'easeOutCirc',
+        delay:0
+    })
+
+});
+title.addEventListener("mouseout", ()=>{
+    let first = document.getElementsByClassName("first")
+    let second = document.getElementsByClassName("second")
+    anime({
+        targets: title,
+        maxWidth: '90px',
+        duration: 100,
+        easing: 'easeOutCirc',
+    })
+    anime({
+        targets: first,
+        translateX:0,
+        duration: 100,
+        easing: 'linear'
+    })
+
+    anime({
+        targets: second,
+        translateX:0,
+        duration: 200,
+        easing: 'easeOutCirc'
+    })
+});
+
+
