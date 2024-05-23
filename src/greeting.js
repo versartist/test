@@ -33,12 +33,12 @@ const greetings = [
   
 
   function displayAndAnimate() {
-    // content.zIndex = -1;
-    // preloader.style.zIndex = 20;
-    // content.display = "none";
+    content.display = "none";
+    content.zIndex = -1;
+    preloader.style.zIndex = 20;
     
     adjustItemNumber(); // Adjust number of items to show based on screen size
-
+// 
     const tl = gsap.timeline({ ease: 'power3.out' }); // Use power3.out for easing (optional)
   
     greetings.forEach((greeting, index, greetingsArray) => {
@@ -47,8 +47,10 @@ const greetings = [
         .to(textHolder,{ duration: .4 , y :80 , ease : "power3.out" })
         .to(textHolder,{ duration: .4 , y : '-100vh' , ease : "power3.out" })
         .to(textHolder, {duration : .1 , opacity : 0} ); 
+        content.display = "block";
         tl.to(stripes,{ duration : .7 , scaleX: 0,rotateX : 5,x : 15, ease:"expo.easeInOut",stagger: 0.06 });
         tl.to(preloader,{duration : .1 , display : "none"})
+        content.zIndex = 1;
       } else {
         tl.to(textHolder, { duration: .15, innerHTML: `<h2 class="greeting">${greeting}</h2>` }); // Update greeting text
       }

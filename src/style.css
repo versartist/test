@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Jost&family=Rubik:wght@400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 *{
     margin: 0;
@@ -9,12 +9,25 @@
 
 :root {
     --main-font : "Nunito";
+    --thin-font : "DM Sans";
     --primary-color : rgb(243, 107, 44);
 }
-
+.content {
+    z-index: -1;
+}
 body{
     font-family: var(--main-font);
-    
+    }
+
+body  .spl-char {
+    color: var(--primary-color);
+}    
+
+.flex-1{
+    flex: 1;
+}
+.dropdown {
+    display: none;
 }
 
 .preloader {
@@ -48,11 +61,86 @@ body{
 
 /* svg */
 .blob-svg {
-    width: 350px;
+    /* transform: scale(1.1); */
+    width: 420px;
+}
+/* nav  */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+    padding: .5rem .8rem;
+}
+
+
+.nav-option li {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: 0 .5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color .2s;
+}
+
+.menuEl:hover {
+    color: var(--primary-color);
+}
+
+.dropdown-wrapper {
+    display: none;
 }
 
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+   .nav-option{
+    display: none;
+   }
+   .dropdown-wrapper{
+    display: block;
+    list-style: none;
+    text-decoration: none;
+   }
+   .dropdown {
+    display: flex;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    gap: 20px;
+    flex-direction: column;
+    transform: translate(-50%,-70%);
+    font-size: 2rem;
+
+   }
+   .dropdown li {
+    text-align: center;
+    list-style: none;
+    font-family: var(--thin-font);
+   }
+   .fullscreen-menu {
+    display: none;
+    position: absolute;
+    background: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
+   }
+   .closeBtn {
+    border: none;
+    background:none;
+    transform: scale(1.3);
+    position: relative;
+    top: -85px;
+    right: -140px;
+   }
+ 
 }
