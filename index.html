@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
@@ -21,17 +21,34 @@
         <div class="stripes"></div>
         <div class="stripes"></div>
         <div class="text">
-            <h2 class="greeting">welcome</h2>
+            
         </div>
     </div>
 
 
     <!-- main -->
-    <section class="main"></section>
+   <div class="content">
+    <main>
+        <div class="hero">
+            
+            <!-- svg---------- -->
+            <svg class="blob-svg" id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                                 
+                <clipPath id="blobClipPath">
+                  <path id="blob" fill="" d="M19.5,-22.9C24.7,-18.9,27.9,-12.2,29.4,-5C30.9,2.2,30.8,10,27.9,17.1C24.9,24.2,19.2,30.7,11.3,35.4C3.5,40,-6.6,42.9,-13.1,39.2C-19.6,35.4,-22.5,25.1,-24.8,16.6C-27,8,-28.5,1.4,-28.8,-6.5C-29.1,-14.3,-28.2,-23.4,-23.2,-27.4C-18.2,-31.4,-9.1,-30.3,-1,-29.1C7.2,-28,14.3,-26.8,19.5,-22.9Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;"/>
+                </clipPath>
+                    <image x="9" y="10" width="80" href="./assets/portrait.png" clip-path="url(#blobClipPath)"  />
+            </svg>
+             <!-- svg---------- -->
+
+        </div>
+    </main>
+   </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="src/script.js"></script>
+    <script src="/src/blob.js"></script>
     <script src="src/greeting.js"></script>
 </body>
 </html>

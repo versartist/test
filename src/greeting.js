@@ -1,6 +1,7 @@
 const textHolder = document.querySelector('.text');
 const stripes = document.querySelectorAll(".stripes");
 const preloader = document.querySelector('.preloader');
+const content = document.querySelector('.content').style;
 const greetings = [
     "Hello" /* English */,
     "Hola" /* Spanish */,
@@ -32,6 +33,10 @@ const greetings = [
   
 
   function displayAndAnimate() {
+    // content.zIndex = -1;
+    // preloader.style.zIndex = 20;
+    // content.display = "none";
+    
     adjustItemNumber(); // Adjust number of items to show based on screen size
 
     const tl = gsap.timeline({ ease: 'power3.out' }); // Use power3.out for easing (optional)
