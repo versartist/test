@@ -10,7 +10,6 @@ menuBtn.addEventListener('click', ()=>{
     main.style.zIndex = -111;
     dropDown.style.zIndex = 111;
     dropDown.style.display = "block";
-//    dropDown.style.transform =  'translateX(100%)';
    anime({
     targets: dropDown,
     opacity :['0%','100%'],
@@ -22,6 +21,7 @@ menuBtn.addEventListener('click', ()=>{
 })
 
 closeBtn.addEventListener("click",()=>{
+    
     anime({
         targets: dropDown,
         opacity :['100%','0%'],
@@ -32,15 +32,36 @@ closeBtn.addEventListener("click",()=>{
     closeBtn.style.display = "none"
     setTimeout(()=>{dropDown.style.display = "none";},100)
     main.style.zIndex = 111;
-    // dropDown.style.zIndex = -111;
     
 })
 //gsap for dmenu
 
-
 menuEl.forEach((el)=>{
-    el.addEventListener("mouseenter", ()=>{
-        const tl = gsap.timeline({ ease: 'linear' });
-        tl.to(el,{ duration: .01 , y :2 , ease : "power3.out" })
+    el.addEventListener("mouseover", ()=>{
+
+        anime({
+            targets: el,
+            rotate: ['-5deg', '5deg', '-5deg', '0deg'],
+            keyframes: [
+                { translateX: [5 , -5] },
+                { translateY: [4 , -2] },
+                { skewX: [4 , -2] },
+               
+            ],
+            translateX:0,
+            translateY:0,
+            duration: 400,
+            easing: 'linear'
+        });
+    })
+
+    el.addEventListener("mouseleave", ()=>{
+        anime({
+            targets: el,
+            translateX:0,
+            translateY:0,
+            duration: 10,
+            easing: 'linear'
+        })
     })
 })
