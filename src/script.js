@@ -4,6 +4,7 @@ const dropDown  = document.querySelector(".fullscreen-menu");
 const closeBtn = document.querySelector('.closeBtn');
 const main = document.querySelector('.content')
 const title = document.querySelector('.title');
+const typed = document.querySelector('#typed');
 
 menuBtn.addEventListener('click', ()=>{
     closeBtn.style.display = "block"
@@ -34,6 +35,51 @@ closeBtn.addEventListener("click",()=>{
     main.style.zIndex = 111;
     
 })
+
+//typed 
+const strings = [
+    " Frontend Developer",
+    " Backend Developer",
+    // Add more strings as needed
+  ];
+
+  setTimeout(()=>{
+    const Type = new Typed(typed,{
+		strings: strings,
+		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+		stringsElement: null,
+		// typing speed
+		typeSpeed: 30,
+		// time before typing starts
+		startDelay: 1200,
+		// backspacing speed
+		backSpeed: 20,
+		// time before backspacing
+		backDelay: 500,
+		// loop
+		loop: true,
+		// false = infinite
+		loopCount: false,
+		// show cursor
+		showCursor: true,
+		// character for cursor
+		cursorChar: "|",
+		// attribute to type (null == text)
+		attr: null,
+		// either html or text
+		contentType: 'html',
+		// call when done callback function
+		callback: function() {},
+		// starting callback function before each string
+		preStringTyped: function() {},
+		//callback for every typed string
+		onStringTyped: function() {},
+		// callback for reset
+		resetCallback: function() {}
+	});
+  },10)
+  
+//typed 
 //gsap for dmenu
 
 menuEl.forEach((el)=>{

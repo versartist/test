@@ -69,11 +69,16 @@ body  .spl-char {
     text-align: center;
 }
 
+.typed-cursor{
+    display: none;
+}
+
 /* svg */
 .blob-svg {
    overflow: hidden;
     width: 420px;
 }
+
 
 /* nav  */
 
@@ -181,9 +186,10 @@ a {
 
 }
 .contact-btn button:hover {
-    background: var(--primary-color);
-    color: #ffffff;
-    transition: .2s ease;
+    transform: scale(1.08);
+    background: white;
+    color: #000000;
+    transition: .3s ease;
 }
 .icons {
     display: flex;
@@ -194,9 +200,11 @@ a {
 .icon:hover {
     transform: scale(1.1);
     color: var(--primary-color);
-    transition: .4s ease-in-out;
+    transition: .3s ease-in-out;
 }
 /* hero sec */
+
+
 
 @media only screen and (max-width: 600px) {
    .nav-option{
