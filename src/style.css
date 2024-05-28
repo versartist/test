@@ -140,8 +140,8 @@ a {
 }
 .hey {
     font-size: 1.1em;
-    font-family:  Tahoma, sans-serif;
-    font-weight: 300;
+    font-family:  var(--thin-font);
+    font-weight: 600;
     position: relative;
     top: 15px;
     left: -10px;
@@ -199,7 +199,7 @@ a {
     display: none;
    }
    .main {
-    height: 100vh;
+    height: calc(100vh - 20px);
    }
    .nav{
     position: relative;
