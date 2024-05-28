@@ -203,9 +203,8 @@ a {
     display: none;
    }
    .main {
-    overflow: hidden;
     width: 100vw;
-    height: calc(100vh - env(safe-area-inset-top));
+    height: calc(100vh - 20px);
    }
    .nav{
     position: relative;
@@ -234,12 +233,13 @@ a {
     font-family: var(--thin-font);
    }
    .fullscreen-menu {
+    overflow: hidden;
     z-index: 888;
     display: none;
     position: absolute;
     background: var(--primary-color);
     width: 100vw;
-    height: calc(100vh - env(safe-area-inset-top));
+    height: calc(100vh - 20px);
    }
    .closeBtn {
     border: none;
