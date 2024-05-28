@@ -3,6 +3,8 @@ const stripes = document.querySelectorAll(".stripes");
 const preloader = document.querySelector('.preloader');
 const hero = document.querySelector('.hero');
 const content = document.querySelector('.content').style;
+const nav = document.querySelector('.nav').style;
+
 const greetings = [
     "Hello" /* English */,
     "Hola" /* Spanish */,
@@ -54,6 +56,7 @@ const greetings = [
         tl.to(stripes,{ duration : .7 , scaleX: 0,rotateX : 5,x : 15, ease:"expo.easeInOut",stagger: 0.06 });
         tl.to(preloader,{duration : .1 , display : "none"})
         content.zIndex = 1;
+        nav.zIndex = 1;
       } else {
         tl.to(textHolder, { duration: .15, innerHTML: `<h2 class="greeting">${greeting}</h2>` }); // Update greeting text
         if(hero.style.display == "none") {
