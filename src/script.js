@@ -43,7 +43,7 @@ const strings = [
     // Add more strings as needed
   ];
 
-  setTimeout(()=>{
+  
     const Type = new Typed(typed,{
 		strings: strings,
 		// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
@@ -77,7 +77,7 @@ const strings = [
 		// callback for reset
 		resetCallback: function() {}
 	});
-  },10)
+  
   
 //typed 
 //gsap for dmenu
