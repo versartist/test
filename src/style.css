@@ -17,7 +17,7 @@
 }
 body{
     background: #000;
-    overflow: hidden;
+    overflow: auto;
     font-family: var(--main-font);
     color: aliceblue;
     }
@@ -245,8 +245,9 @@ a {
    }
  
    .hero {
-    margin: 15px auto 0;
+    margin: 5px auto 0;
     transform: scale(1);
+    gap:10px;
     flex-direction: column;
    }
    .icons {
