@@ -198,10 +198,13 @@ a {
    .nav-option{
     display: none;
    }
-   .blob-svg {
-    /* transform: scale(1.1); */
-    width: 450px;
-}
+   .main {
+    height: 100vh;
+   }
+   .nav{
+    position: relative;
+    z-index: 10;
+   }
    .dropdown-wrapper{
     display: block;
     list-style: none;
@@ -245,8 +248,8 @@ a {
    }
  
    .hero {
-    margin: 0px auto ;
-    transform: scale(1);
+    margin: -40px auto 0px;
+    transform: scale(.95);
     gap:0;
     flex-direction: column;
    }
@@ -266,9 +269,8 @@ a {
 
    }
    .rest {
-    margin : 0px 25px;
+    padding-left: 30px;
    }
-  .svg {
-   transform :scale(.9);
-   } 
+ 
+
 }
