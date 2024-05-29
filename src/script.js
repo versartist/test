@@ -5,6 +5,26 @@ const closeBtn = document.querySelector('.closeBtn');
 const main = document.querySelector('.content')
 const title = document.querySelector('.title');
 const typed = document.querySelector('#typed');
+const homebtn = document.querySelector("#home");
+
+
+//reapeated functions
+
+function closeMenu (){
+    anime({
+        targets: dropDown,
+        opacity :['100%','0%'],
+        translateX: ['0%', '100%'],
+        duration: 150,
+        easing: 'easeOutQuad'
+    });
+    closeBtn.style.display = "none"
+    setTimeout(()=>{dropDown.style.display = "none";},100)
+    main.style.zIndex = 111;
+}
+
+
+//reapeated functions
 
 menuBtn.addEventListener('click', ()=>{
     closeBtn.style.display = "block"
@@ -21,20 +41,7 @@ menuBtn.addEventListener('click', ()=>{
    
 })
 
-closeBtn.addEventListener("click",()=>{
-    
-    anime({
-        targets: dropDown,
-        opacity :['100%','0%'],
-        translateX: ['0%', '100%'],
-        duration: 150,
-        easing: 'easeOutQuad'
-    });
-    closeBtn.style.display = "none"
-    setTimeout(()=>{dropDown.style.display = "none";},100)
-    main.style.zIndex = 111;
-    
-})
+closeBtn.addEventListener("click",closeMenu)
 
 //typed 
 const strings = [
@@ -163,4 +170,6 @@ title.addEventListener("mouseout", ()=>{
     })
 });
 
-
+//menu buttons
+homebtn.addEventListener('click', closeMenu)
+//menu buttons

@@ -65,3 +65,4 @@ const greetings = [
       }
     });
   }
+  displayAndAnimate()
