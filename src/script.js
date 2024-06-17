@@ -6,6 +6,7 @@ const main = document.querySelector('.content')
 const title = document.querySelector('.title');
 const typed = document.querySelector('#typed');
 const homebtn = document.querySelector("#home");
+const spaBtn = document.querySelectorAll('.spa-btn');
 
 
 //reapeated functions
@@ -170,21 +171,18 @@ title.addEventListener("mouseout", ()=>{
     })
 });
 
-//menu buttons
-homebtn.addEventListener('click', closeMenu)
-//menu buttons
+
 
 
 //spa 
 
-const spaBtn = document.querySelectorAll('.spa-btn');
 
-spaBtn.forEach((el)=>{
-    el.addEventListener('click', ()=>{
-        el.preventDefault()
-        route();
-    })
-})
+spaBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        console.log(e.target.innerHTML)
+        e.preventDefault();
+    route();   });
+});
 
 const routes = {
     404: {
@@ -214,6 +212,7 @@ const route = (event) => {
     event.preventDefault();
     // window.history.pushState(state, unused, target link);
     window.history.pushState({}, "", event.target.href);
+    console.log('route done')
     locationHandler();
 };
 
@@ -229,12 +228,17 @@ const locationHandler = async () => {
     // get the html from the template
     const html = await fetch(route.template).then((response) => response.text());
     // set the content of the content div to the html
-    document.getElementById("content").innerHTML = html;
+    document.querySelector('.content').innerHTML = html;
     // set the title of the document to the title of the route
     document.title = route.title;
     // set the description of the document to the description of the route
-    document
-        .setAttribute("content", route.description);
+
 };
+
+window.onpopstate = locationHandler;
+// call the urlLocationHandler function to handle the initial url
+window.route = route;
+// call the urlLocationHandler function to handle the initial url
+locationHandler();
 
 //spa 
